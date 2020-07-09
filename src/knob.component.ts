@@ -42,7 +42,7 @@ export class KnobComponent implements ControlValueAccessor {
     /** if the emition of events is intensive or not */
     @Input('intensive') intensive: boolean = true;
 
-    @ViewChild('knob', {static: false}) knobDiv: ElementRef;
+    @ViewChild('knob') knobDiv: ElementRef;
 
     /** the real meter value */
     @Input('value') meterValue: number = 0;
