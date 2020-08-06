@@ -16,7 +16,7 @@ module.exports = function(config) {
 
         plugins: [
             require('karma-jasmine'),
-            require('karma-firefox-launcher'),
+            require('karma-chrome-launcher'),
             require('karma-jasmine-html-reporter')
         ],
 
@@ -99,7 +99,7 @@ module.exports = function(config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Firefox'],
+        browsers: ['Chrome'],
         singleRun: false
     })
 }

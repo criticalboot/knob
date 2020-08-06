@@ -9,10 +9,18 @@
     "lib": [ "es2015", "dom" ],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "types": ["@types/jasmine"]
+    "types": ["@types/jasmine"],
+    "typeRoots": ["node_modules/@types"]
   },
   "exclude": [
     "node_modules",
-    "**/*-aot.ts"
+    "**/*-aot.ts",
+    "typings/browser.d.ts",
+    "typings/browser/"
+  ],
+  "compileOnSave": false,
+  "filesGlob": [
+    "public/*.ts",
+    "public//*.ts"
   ]
 }

@@ -1,4 +1,5 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
@@ -11,9 +12,14 @@
     "suppressImplicitAnyIndexErrors": true,
     "declaration": true,
     "outDir": "lib",
-    "rootDir": "src"
+    "rootDir": "src",
+    "typeRoots": ["node_modules/@types"]
   },
   "include": [
     "src/**/*"
-  ]
+  ],
+  "lib": [
+    "es2018",
+    "dom"
+  ],
 }

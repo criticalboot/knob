@@ -72,10 +72,19 @@ export class KnobComponent implements ControlValueAccessor {
     }
 
     ngOnInit() {
-        var self = this;
-        this.knobDiv.nativeElement.addEventListener('mousedown', function (e: any) { self.setChangeListener(e); });
-        this.knobDiv.nativeElement.addEventListener('touchstart', function (e: any) { self.setChangeListener(e); });
-        this.calculateDialAngle();
+        // var self = this;
+        // this.knobDiv.nativeElement.addEventListener('mousedown', function (e: any) { self.setChangeListener(e); });
+        // this.knobDiv.nativeElement.addEventListener('touchstart', function (e: any) { self.setChangeListener(e); });
+        // this.calculateDialAngle();
+    }
+
+    ngAfterViewInit(): void {
+      //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+      //Add 'implements AfterViewInit' to the class.
+      var self = this;
+      this.knobDiv.nativeElement.addEventListener('mousedown', function (e: any) { self.setChangeListener(e); });
+      this.knobDiv.nativeElement.addEventListener('touchstart', function (e: any) { self.setChangeListener(e); });
+      this.calculateDialAngle();
     }
 
     /**
